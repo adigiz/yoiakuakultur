@@ -10,7 +10,7 @@
       <div class="field">
         <label class="label">Card Title</label>
         <div class="control">
-          <input class="input" type="text" placeholder="e.g. Modal Gotong Royong" name="card_title" value="{{ $card->card_title }}">
+          <input class="input" type="text" placeholder="e.g. Modal Gotong Royong" name="card_title" value="{{ $card->card_title }}" required>
         </div>
       </div>
       <div class="field">
@@ -18,7 +18,7 @@
         <div class="control">
           <textarea class="textarea"
             placeholder="e.g. Dengan digunakannya modal gotong royong sehingga tidak harus menggunakan modal besar"
-            name="card_description">{{ $card->description }}</textarea>
+            name="card_description" required>{{ $card->description }}</textarea>
         </div>
       </div>
       <div class="field">
@@ -26,7 +26,7 @@
         <div class="control">
           <div class="file">
             <label class="file-label">
-              <input class="file-input" type="file" name="image">
+              <input class="file-input" type="file" name="image" required>
               <span class="file-cta">
                 <span class="file-icon">
                   <i class="fas fa-upload"></i>
@@ -51,7 +51,7 @@
       <div class="field">
         <label class="label">Card Title</label>
         <div class="control">
-          <input class="input" type="text" placeholder="e.g. Modal Gotong Royong" name="card_title">
+          <input class="input" type="text" placeholder="e.g. Modal Gotong Royong" name="card_title" required>
         </div>
       </div>
       <div class="field">
@@ -59,7 +59,7 @@
         <div class="control">
           <textarea class="textarea"
             placeholder="e.g. Dengan digunakannya modal gotong royong sehingga tidak harus menggunakan modal besar"
-            name="card_description"></textarea>
+            name="card_description" required></textarea>
         </div>
       </div>
       <div class="field">
@@ -67,7 +67,7 @@
         <div class="control">
           <div class="file">
             <label class="file-label">
-              <input class="file-input" type="file" name="image">
+              <input class="file-input" type="file" name="image" required>
               <span class="file-cta">
                 <span class="file-icon">
                   <i class="fas fa-upload"></i>
