@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    @include('components/navbar')
+    {{-- @include('components/navbar') --}}
     <div id="app">
         @yield('section')
     </div>
