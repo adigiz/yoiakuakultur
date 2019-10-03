@@ -13,7 +13,7 @@
 
 Route::get('/', 'PageController@index');
 Route::get('/welcome/cards', 'PageController@showCardList');
-Route::get('/welcome/cards/delete/{id}', 'PageController@deleteCards');
+Route::get('/welcome/cards/delete/{id}', 'PageController@deleteCard');
 Route::get('/welcome/cards/edit/{id}', 'PageController@editCardForm');
 Route::post('/welcome/cards/edit/{id}', 'PageController@editCard');
 Route::get('/welcome/cards/new', 'PageController@newCardForm');

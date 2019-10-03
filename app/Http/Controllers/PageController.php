@@ -24,6 +24,11 @@ class PageController extends Controller
     }
 
     public function storeCard(Request $request) {
+        $request->validate([
+            'card_title' => 'bail|required',
+            'card_description' => 'required',
+            'image' => 'required',
+        ]);
         $card_contents = new CardContent();
 
         $image = time().'.'.request()->image->getClientOriginalExtension();
@@ -37,8 +42,7 @@ class PageController extends Controller
         $card_contents->path =  "/images/" . $image;
         $card_contents->save();
         
-        echo $image . " successfully moved" . "<br>";
-        echo "data saved";
+        return redirect('/welcome/cards/new')->with(['success' => 'Card stored successfully!']);
     }
 
     public function deleteCard($id) {
