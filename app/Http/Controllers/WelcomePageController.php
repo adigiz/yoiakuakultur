@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\CardContent;
 
-class PageController extends Controller
+class WelcomePageController extends Controller
 {
     public function index() {
         $card_contents  = \App\CardContent::all();
