@@ -41,7 +41,7 @@ class PageController extends Controller
         $card_contents->description = $card_description;
         $card_contents->path =  "/images/" . $image;
         $card_contents->save();
-        
+
         return redirect('/welcome/cards/new')->with(['success' => 'Card stored successfully!']);
     }
 
@@ -75,7 +75,6 @@ class PageController extends Controller
         $card_contents->path =  "/images/" . $image;
         $card_contents->save();
         
-        echo $image . " successfully moved" . "<br>";
-        echo "data saved";
+        return redirect('/welcome/cards/new')->with(['success' => 'Card edited successfully!']);
     }
 }
