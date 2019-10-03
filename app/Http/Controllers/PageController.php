@@ -14,7 +14,7 @@ class PageController extends Controller
         return view('welcome', ['card_contents' => $card_contents]);
     }
 
-    public function cards() {
+    public function showCardList() {
         $card_contents = \App\CardContent::all();
         return view('card_lists', ['card_contents' => $card_contents]);
     }
