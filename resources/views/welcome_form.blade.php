@@ -73,7 +73,7 @@
                   <i class="fas fa-upload"></i>
                 </span>
                 <span class="file-label">
-                  Choose a image
+                  Choose an image
                 </span>
               </span>
             </label>
