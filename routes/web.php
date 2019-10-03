@@ -16,5 +16,5 @@ Route::get('/welcome/cards', 'PageController@showCardList');
 Route::get('/welcome/cards/delete/{id}', 'PageController@deleteCards');
 Route::get('/welcome/cards/edit/{id}', 'PageController@editCardForm');
 Route::post('/welcome/cards/edit/{id}', 'PageController@editCard');
-Route::get('/welcome/cards/new', 'PageController@form');
-Route::post('/welcome/cards/new', 'PageController@upload');
+Route::get('/welcome/cards/new', 'PageController@newCardForm');
+Route::post('/welcome/cards/new', 'PageController@storeCard');

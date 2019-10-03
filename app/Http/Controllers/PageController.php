@@ -19,11 +19,11 @@ class PageController extends Controller
         return view('card_lists', ['card_contents' => $card_contents]);
     }
 
-    public function form() {
+    public function newCardForm() {
         return view('welcome_form');
     }
 
-    public function upload(Request $request) {
+    public function storeCard(Request $request) {
         $card_contents = new CardContent();
 
         $image = time().'.'.request()->image->getClientOriginalExtension();
