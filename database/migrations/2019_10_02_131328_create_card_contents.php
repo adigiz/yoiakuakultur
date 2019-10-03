@@ -15,7 +15,6 @@ class CreateCardContents extends Migration
     {
         Schema::create('card_contents', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
             $table->string('card_title');
             $table->text('description');
             $table->string('path');
