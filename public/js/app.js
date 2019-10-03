@@ -20148,21 +20148,17 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "card-image" }, [
-      _c(
-        "figure",
-        { staticClass: "image is-4by3", staticStyle: { margin: "0 auto" } },
-        [
-          _c("img", {
-            attrs: {
-              src:
-                "https://bulma.io/images/placeholders/1280x960.png" ||
-                false,
-              alt: "Placeholder image"
-            }
-          })
-        ]
-      )
+    _c("div", { staticClass: "card-content" }, [
+      _c("figure", { staticClass: "image" }, [
+        _c("img", {
+          staticStyle: {
+            "max-height": "156px",
+            "max-width": "156px",
+            margin: "0 auto"
+          },
+          attrs: { src: _vm.cardImage, alt: "Placeholder image" }
+        })
+      ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "card-content description" }, [

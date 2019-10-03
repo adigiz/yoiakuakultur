@@ -5,17 +5,11 @@
 </div>
 <div class="container">
     <div class="columns is-multiline is-centered">
+        @foreach ($card_contents as $card_content)
         <div class="column is-one-third">
-            <card-component card-title="Modal Gotong Royong"
-                card-content="Dengan digunakannya modal gotong royong sehingga tidak harus menggunakan modal besar" />
+            <card-component card-title="{{ $card_content->card_title }}"
+            card-content="{{ $card_content->description }}" card-image='{{ asset("$card_content->path") }}' />
         </div>
-        <div class="column is-one-third">
-            <card-component card-title="High Return"
-                card-content="Investasi menarik di budidaya perikanan dengan hasil yang sangat menarik" />
-        </div>
-        <div class="column is-one-third">
-            <card-component card-title="Teknologi Modern"
-                card-content="Kegagalan terhadap hasil panen memiliki kemungkinan yang sangat kecil karena menggunakan teknologi modern" />
-        </div>
+        @endforeach
     </div>
 </div>

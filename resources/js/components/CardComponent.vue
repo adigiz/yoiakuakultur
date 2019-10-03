@@ -3,9 +3,9 @@
     <div id ="card-title" class="card-content" style="max-width: 210px; margin: 0 auto">
       <p class="title has-text-centered has-text-weight-normal is-size-4">{{ cardTitle }}</p>
     </div>
-    <div class="card-image">
-      <figure class="image is-4by3" style="margin: 0 auto">
-        <img :src="'https://bulma.io/images/placeholders/1280x960.png' || cardImage" alt="Placeholder image" />
+    <div class="card-content">
+      <figure class="image">
+        <img :src="cardImage" alt="Placeholder image" style="max-height: 156px; max-width: 156px; margin: 0 auto"/>
       </figure>
     </div>
     <div class="card-content description">
