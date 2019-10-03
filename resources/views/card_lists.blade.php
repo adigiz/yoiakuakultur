@@ -3,6 +3,20 @@
 @section('section')
 <div class="section">
   <div class="container">
+    @if ($errors->any())
+    <div class="notification is-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
+    @if ($message = Session::get('success'))
+    <div class="notification is-success">
+      <strong>{{ $message }}</strong>
+    </div>
+    @endif
     <div class="level">
       <div class="level-left">
         <h1 class="level-item title">Card List</h1>
@@ -29,7 +43,8 @@
           <td>{{ $data->description }}</td>
           <td>{{ $data->path }}</td>
           <td>
-            <a href="/welcome/cards/delete/{{$data->id}}">delete</a>
+            <a href="/welcome/cards/delete/{{$data->id}}"
+              onclick="return confirm('Apakah anda yakin ingin menghapus?')">delete</a>
             <a href="/welcome/cards/edit/{{$data->id}}">edit</a>
           </td>
         </tr>

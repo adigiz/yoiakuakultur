@@ -51,7 +51,7 @@ class PageController extends Controller
 
         unlink(public_path($card->path));
 
-        return redirect('/welcome/cards');
+        return redirect('/welcome/cards')->with(['success' => 'Card deleted...']);
     }
 
     public function editCardForm($id) {
