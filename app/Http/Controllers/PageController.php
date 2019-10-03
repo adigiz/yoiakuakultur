@@ -62,9 +62,7 @@ class PageController extends Controller
         $card_title = $request->input('card_title');
         $card_description = $request->input('card_description');
 
-        // delete image
         unlink(public_path($card_contents->path));
-        // Storage::delete(public_path() . '' . $card_contents->path );
 
         request()->image->move(public_path('images'), $image);
 
