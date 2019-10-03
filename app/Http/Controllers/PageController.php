@@ -25,9 +25,9 @@ class PageController extends Controller
 
     public function storeCard(Request $request) {
         $request->validate([
-            'card_title' => 'bail|required',
-            'card_description' => 'required',
-            'image' => 'required',
+            'card_title' => 'bail|required|string',
+            'card_description' => 'required|string',
+            'image' => 'required|image',
         ]);
         $card_contents = new CardContent();
 
@@ -60,6 +60,12 @@ class PageController extends Controller
     }
 
     public function editCard(Request $request) {
+        $request->validate([
+            'card_title' => 'bail|required|string',
+            'card_description' => 'required|string',
+            'image' => 'required|image',
+        ]);
+        
         $card_contents = CardContent::find($request->id);
 
         $image = time().'.'.request()->image->getClientOriginalExtension();
