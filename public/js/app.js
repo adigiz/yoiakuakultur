@@ -32326,7 +32326,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
- // components list
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('card-component', _components_CardComponent__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({

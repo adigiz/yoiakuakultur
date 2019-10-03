@@ -41,7 +41,7 @@ class PageController extends Controller
         echo "data saved";
     }
 
-    public function deleteCards($id) {
+    public function deleteCard($id) {
         $card = CardContent::find($id);
         $card->delete();
 
