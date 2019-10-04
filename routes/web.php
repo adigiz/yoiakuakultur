@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomePageController@index');
+Route::get('/welcome/cards', 'WelcomePageController@showCardList');
+Route::get('/welcome/cards/delete/{id}', 'WelcomePageController@deleteCard');
+Route::get('/welcome/cards/edit/{id}', 'WelcomePageController@editCardForm');
+Route::post('/welcome/cards/edit/{id}', 'WelcomePageController@editCard');
+Route::get('/welcome/cards/new', 'WelcomePageController@newCardForm');
+Route::post('/welcome/cards/new', 'WelcomePageController@storeCard');
